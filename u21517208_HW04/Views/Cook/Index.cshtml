@@ -1,0 +1,49 @@
+﻿@using u21517208_HW04.Models
+@model  List<CookBookModel>
+
+
+@{
+      ViewBag.Title = "Index";
+      Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>The aim of this view is to extend help. You alone can use these recipes to make meals that can feed those in need</p>
+<@*p>style table better</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Ingredients</th>
+        <th>Method</th>
+        <th>Serves</th>
+    </tr>
+    @foreach (CookBookModel cookbook in Model)
+    {
+        <tr>
+            <td>@cookbook.Name</td>
+            <td>@cookbook.Ingredients</td>
+            <td>@cookbook.Method</td>
+            <td>@cookbook.Serves</td>
+        </tr>
+    }
+</table>*@
+
+<div class="container">
+    <div class="row">
+        @foreach (var cookbook in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card h-100" style="width: 15rem;">
+                    <img src="~/Media//Meal.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">@cookbook.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">using @cookbook.Ingredients</h6>
+                        <p class="card-text">@cookbook.Method</p><br />
+                        <p>@cookbook.Serves</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

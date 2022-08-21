@@ -1,0 +1,147 @@
+﻿@model u21517208_HW04.Models.Donate
+
+@{
+    ViewBag.Title = "Donate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Donate</h2>
+
+@*@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Surnmane, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Surnmane, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Surnmane, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Donate" class="btn btn-default" />
+            </div>
+        </div>
+    </div>*@
+
+
+}
+
+@*//Modal popup after donation*@
+<!--<div class="AddPopUp">
+    @Html.Label("Add pop up")
+</div>
+<div class="modal fade" id="MyPopUp" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-title">
+                Thank You for your donation
+            </div>
+            <div class="modal-body">-->
+@*here are going your controls etc*@
+<!--</div>
+        </div>
+    </div>
+</div>-->
+@*javascript for modal popup*@
+<!--@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".AddPopUp").click(function (e) {
+                $('#MyPopUp').modal('show');
+            });
+        });
+    </script>
+}-->
+
+<div class="container mt-2">
+
+    <!-- Input field to accept user input -->
+    Name: <input type="text" name="name"
+                 id="name"><br><br>
+
+    Marks: <input type="text" name="marks"
+                  id="marks"><br><br>
+
+    <!-- Button to invoke the modal -->
+    <button type="button" class="btn btn-primary
+            btn-sm" data-toggle="modal"
+            data-target="#exampleModal"
+            id="submit">
+        Donate
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal"
+         tabindex="-1"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"
+                        id="exampleModalLabel">
+                        Thank you for your Donation
+                    </h5>
+
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                   
+                    
+                    <h6 id="modal_body"></h6>
+                    <button type="button"
+                            class="btn btn-success btn-sm"
+                            data-toggle="modal"
+                            data-target="#exampleModal"
+                            id="submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#submit").click(function () {
+        var name = $("#name").val();
+        var marks = $("#marks").val();
+        var str = "You Have Entered "
+            + "Name: " + name
+            + " and Marks: " + marks;
+        $("#modal_body").html(str);
+    });
+</script>

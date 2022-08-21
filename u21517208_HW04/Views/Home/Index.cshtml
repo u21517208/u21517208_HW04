@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@Styles.Render("~/Content/css/style.css")
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<div>
+    <h2 style="background-color: darkgreen;color: black; text-align: center; font-style: oblique">NGO</h2>
+    <fieldset>
+        @*<div class="col-lg-1">
+                <a href="~/Media/UCN1.png" class="thumbnail">
+                    <p>Use Case Narrative 1</p>
+                    <img src="~/Media/UCN1.png" />
+                </a>
+            </div>
+            <div class="col-lg-1">
+                <a href="~/Media/UCN2.png" class="thumbnail">
+                    <p>Use Case Narratitve 2</p>
+                    <img src="~/Media/UCN2.png" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="~/Media/UCN3.png" class="thumbnail">
+                    <p>Use Case Narrative 3</p>
+                    <img src="~/Media/UCN3.png" />
+                </a>
+            </div>
+            <div class="col-lg-1">
+                <a href="~/Media/UCN4.png" class="thumbnail">
+                    <p>Use Case Narrative 4</p>
+                    <img src="~/Media/UCN4.png" />
+                </a>
+            </div>
+            <div class="col-lg-1">
+                <a href="~/Media/UCN5.png" class="thumbnail">
+                    <p>Use Case Narrative 5</p>
+                    <img src="~/Media/UCN5.png" />
+                </a>
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <h1>Class Structure Diagram</h1>
+                <p class="lead">Dis it.</p>
+            </div>*@
+
+
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="~/Media/diagram.drawio" style="width:100%">
+                <div class="text">Diagram Structure</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="~/Media/UCN2.png" style="width:100%">
+                <div class="text">Use Case Narrative 1</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="~/Media/UCN3.png" style="width:100%">
+                <div class="text">Use Case Narrative 2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="~/Media/UCN4.png" style="width:100%">
+                <div class="text">Use Case Narrative 3</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="~/Media/UCN4.png" style="width:100%">
+                <div class="text">Use Case Narrative 4</div>
+            </div>
+
+            
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+           
+        </div>
+    </fieldset>
+</div>
+
+
+
+
+
+@*Javascript function to enable slide show*@
+<footer>
+    <p style="background-color: darkgreen; font-weight: bold; color:black; text-align: center; font-style: oblique">
+        
+        <script>
+    document.write(new Date().toDateString());
+
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+
+
+
+
+        </script>
+    </p>
+</footer> 

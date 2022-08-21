@@ -1,0 +1,28 @@
+﻿@model List<u21517208_HW04.Models.WhichPlantsToGrowModel>
+@{
+    ViewBag.Title = "WhichPlantsToGrow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>WhichPlantsToGrow</h2>
+<p>In this view, you will see the recommended plants to grow and what climate they grow best in</p>
+<br/>
+<div style="height: 400px; overflow: auto;">
+    <table class="table table-condensed table-hover">
+
+
+        <thead style="position:sticky; top:0">
+            <tr bgcolor="green">
+                <th>Name</th>
+                <th>Climate</th>
+            </tr>
+
+            @foreach (var growth in Model)
+            {
+                <tr>
+                    <td>@growth.Name</td>
+                    <td>@growth.Climate</td>
+                </tr>
+            }
+</table>
+</div>

@@ -1,0 +1,38 @@
+﻿@model List<u21517208_HW04.Models.HowToPlantModel>
+@{
+    ViewBag.Title = "HowToPlant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>How To Plant</h2>
+
+
+@*string name, int time, string soiltype, string method*@
+
+<p>In this view you will see what plants need to grow and how to plant them</p>
+<div style="height: 400px; overflow: auto;">
+    <table class="table table-condensed table-hover">
+        
+
+        <thead style="position:sticky; top:0">
+                <tr bgcolor="green">
+                    <th>Name</th>
+                    <th>Weeks</th>
+                    <th>SoilType</th>
+                    <th>Method</th>
+                </tr>
+        </thead>
+        @foreach (var plant in Model)
+        {
+                <tr>
+                    <td>@plant.Name</td>
+                    <td>@plant.Time</td>
+                    <td>@plant.SoilType</td>
+                    <td>@plant.Method</td>
+
+                </tr>
+         }
+
+
+    </table>
+</div>
