@@ -82,8 +82,8 @@
     Name: <input type="text" name="name"
                  id="name"><br><br>
 
-    Marks: <input type="text" name="marks"
-                  id="marks"><br><br>
+    Amounts: <input type="text" name="Amounts"
+                  id="Amounts"><br><br>
 
     <!-- Button to invoke the modal -->
     <button type="button" class="btn btn-primary
@@ -138,10 +138,10 @@
 <script type="text/javascript">
     $("#submit").click(function () {
         var name = $("#name").val();
-        var marks = $("#marks").val();
+        var Amounts = $("#Amounts").val();
         var str = "You Have Entered "
             + "Name: " + name
-            + " and Marks: " + marks;
+            + " and Amounts: " + Amounts;
         $("#modal_body").html(str);
     });
 </script>
