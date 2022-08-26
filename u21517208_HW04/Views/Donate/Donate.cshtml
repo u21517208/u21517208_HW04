@@ -96,14 +96,14 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModal"
          tabindex="-1"
-         aria-labelledby="exampleModalLabel"
+         aria-labelledby="ModalLabel"
          aria-hidden="true">
 
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"
-                        id="exampleModalLabel">
+                        id="ModalLabel">
                         Thank you for your Donation
                     </h5>
 
@@ -139,9 +139,8 @@
     $("#submit").click(function () {
         var name = $("#name").val();
         var Amounts = $("#Amounts").val();
-        var str = "You Have Entered "
-            + "Name: " + name
-            + " and Amounts: " + Amounts;
+        var str = "Name: " + name
+            + " has donated: " + Amounts;
         $("#modal_body").html(str);
     });
 </script>

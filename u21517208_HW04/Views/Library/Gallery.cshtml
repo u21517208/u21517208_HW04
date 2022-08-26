@@ -10,7 +10,7 @@
 @*(string name, string location, int peoplefed)*@
 <p>In this view you will see the different projects we have done </p>
 <br />
-<table>
+@*<table>
     <tr>
         <th>Name</th>
         <th>Location</th>
@@ -24,4 +24,26 @@
             <td>@data.PeopleFed</td>
         </tr>
     }
-</table>
+</table>*@
+
+<div style="height: 400px; overflow: auto;">
+    <table class="table table-condensed table-hover">
+
+
+        <thead style="position:sticky; top:0">
+            <tr bgcolor="green">
+                <th>Name</th>
+                <th>Location</th>
+                <th>Number of People Fed</th>
+            </tr>
+
+            @foreach (var data in Model)
+            {
+             <tr>
+                <td>@data.Name</td>
+                <td>@data.Location</td>
+                <td>@data.PeopleFed</td>
+              </tr>
+            }
+    </table>
+</div>
