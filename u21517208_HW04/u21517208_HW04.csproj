@@ -134,6 +134,7 @@
     <Compile Include="Models\HowToPlantModel.cs" />
     <Compile Include="Models\LibraryModel.cs" />
     <Compile Include="Models\CookBookModel.cs" />
+    <Compile Include="Recipe\Recipes.cs" />
     <Compile Include="Models\VolunteerModel.cs" />
     <Compile Include="Models\WhichPlantsToGrowModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

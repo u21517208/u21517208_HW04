@@ -9,7 +9,7 @@
 
 <h2>Index</h2>
 <p>The aim of this view is to extend help. You alone can use these recipes to make meals that can feed those in need</p>
-<@*p>style table better</p>
+@*p>style table better</p>
 
 <table>
     <tr>
@@ -33,9 +33,9 @@
     <div class="row">
         @foreach (var cookbook in Model)
         {
-            <div class="col-lg-4 col-md-6 mb-3">
-                <div class="card h-100" style="width: 10rem;">
-                    <img src="~/Media//Meal.jpg" class="card-img-top" style="width:200px;">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card h-100" style="width: 20rem;">
+                    <img src="@cookbook.LeadingImage" class="card-img-top" style="width:250px; height:300px;">
                     <div class="card-body">
                         <h5 class="card-title">@cookbook.Name</h5>
                         <h6 class="card-subtitle mb-2 text-muted">using @cookbook.Ingredients</h6>
